@@ -9,6 +9,15 @@ import SwiftUI
 import UIKit
 
 struct PhotoSubmission: View {
+    
+    //Receive Data from UploadaMenu
+    //https://stackoverflow.com/questions/65452602/how-can-i-pass-data-through-a-navigation-link-with-fetchedresults-and-coredata
+    
+    var restaurantname: String
+    var restaurantaddress: String
+    var restaurantdescription: String
+    var email: String
+    
     @State private var isShown: Bool = false
     @State private var image: Image = Image(systemName: "")
     @State private var sourceType: UIImagePickerController.SourceType = .camera
@@ -59,11 +68,13 @@ struct PhotoSubmission: View {
     }
 }
 
-struct PhotoSubmission_Previews: PreviewProvider {
-    static var previews: some View {
-        PhotoSubmission()
-    }
-}
+//@ryan I commented this out.
+
+//struct PhotoSubmission_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PhotoSubmission()
+//    }
+//}
 
 struct A: UIViewControllerRepresentable{
     @Binding var isShown: Bool
