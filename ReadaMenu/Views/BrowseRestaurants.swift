@@ -2,50 +2,36 @@
 //  BrowseRestaurants.swift
 //  ReadaMenu
 //
-//  Created by Luah Shi Hui on 2/5/22.
+//  Created by Luah Shi Hui on 6/5/22.
 //
 
 import SwiftUI
 
 struct BrowseRestaurants: View {
-    @State var SearchingFor = ""
-    let restaurants = [
-        "Burger King",
-        "Crooked Cooks",
-        "Gom Gom",
-        "Gong Yuan Mala Tang",
-        "Hans",
-        "Mac Donalds",
-        "Mr Bean",
-        "Saizeriya",
-        "Stuff'd",
-        "Sukiya",
-        "Toast Box",
-        "Ya Kun"
-    ]
+    
+    @State var search = ""
+    
+    @ObservedObject var restaurants = getRestaurants()
+    
     var body: some View {
-        List{ //list view
-            ForEach(results, id:\.self){
-                restaurant in NavigationLink(destination: ContentView()){
-                    Text(restaurant)
-                        .padding()
-                        .accessibility(label: Text(restaurant))
+        
+        List{
+            //ForEach(0..<50) { i in Text("List of \(i)") }
+            ForEach(self.restaurants.restaurants.filter{(self.search.isEmpty ? true: $0.name.localizedCaseInsensitiveContains(self.search))}, id: \.id) {
+                i in NavigationLink(destination: BrowseCategories()){
+                    VStack(alignment: .leading) {
+                        Text(i.name).font(.title).bold()
+                        Spacer()
+                        Text(i.location).font(.subheadline).bold()
+                        Spacer()
+                        Text(i.description).font(.subheadline)
+                        }
+                    }
                 }
-            }
-        }.offset(x: 0, y: -30)
-            
-        .searchable(text: $SearchingFor, placement: .navigationBarDrawer(displayMode: .always)) //search bar
+        }
+        .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always)) //search bar
         .navigationTitle("Restaurant List")
         .navigationBarTitleDisplayMode(.inline)
-        
-    }
-    
-    var results: [String]{
-        if SearchingFor.isEmpty{
-            return restaurants
-        } else{
-            return restaurants.filter{$0.contains(SearchingFor)} //show matching result
-        }
     }
 }
 
