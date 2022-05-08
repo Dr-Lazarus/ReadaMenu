@@ -2,33 +2,38 @@
 //  BrowseCategories.swift
 //  ReadaMenu
 //
-//  Created by Luah Shi Hui on 6/5/22.
+//  Created by Luah Shi Hui on 8/5/22.
 //
 
 import SwiftUI
 
 struct BrowseCategories: View {
     
-    @ObservedObject var restaurants = getRestaurants()
+    var restaurant: dataType
     
     var body: some View {
         List{
-            //ForEach(0..<50) { i in Text("List of \(i)") }
-            ForEach(self.restaurants.restaurants, id: \.id) {
-                i in NavigationLink(destination: BrowseCategories()){
-                    VStack(alignment: .leading) {
-                        Text(i.name).font(.title).bold()
-                        }
-                    }
+            ForEach(self.restaurant.categories[0...(self.restaurant.categories.capacity-1)], id: \.self){ category in
+                NavigationLink(destination: BrowseDishes()){
+                    Text(category).padding()
                 }
+            }
         }
-        .navigationTitle("Menu Categories")
+        .navigationTitle(restaurant.name)
         .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
+
+/*
 struct BrowseCategories_Previews: PreviewProvider {
+    
     static var previews: some View {
-        BrowseCategories()
+        BrowseCategories(restaurant: dataType)
     }
 }
+ */
+ 
+
+

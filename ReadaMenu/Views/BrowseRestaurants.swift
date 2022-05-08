@@ -18,20 +18,21 @@ struct BrowseRestaurants: View {
         List{
             //ForEach(0..<50) { i in Text("List of \(i)") }
             ForEach(self.restaurants.restaurants.filter{(self.search.isEmpty ? true: $0.name.localizedCaseInsensitiveContains(self.search))}, id: \.id) {
-                i in NavigationLink(destination: BrowseCategories()){
+                i in NavigationLink(destination: BrowseCategories(restaurant: i)){
                     VStack(alignment: .leading) {
                         Text(i.name).font(.title).bold()
                         Spacer()
                         Text(i.location).font(.subheadline).bold()
                         Spacer()
                         Text(i.description).font(.subheadline)
-                        }
-                    }
+                    }.padding()
+                }
                 }
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always)) //search bar
         .navigationTitle("Restaurant List")
         .navigationBarTitleDisplayMode(.inline)
+        .offset(x: 0, y: -30)
     }
 }
 
