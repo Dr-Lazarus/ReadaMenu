@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import FirebaseFirestore
 
 struct PhotoSubmission: View {
     
@@ -16,7 +17,8 @@ struct PhotoSubmission: View {
     var restaurantname: String
     var restaurantaddress: String
     var restaurantdescription: String
-    var email: String
+    @State private var showingAlert = false
+//    var email: String
     
     @State private var isShown: Bool = false
     @State private var image: Image = Image(systemName: "")
@@ -50,15 +52,43 @@ struct PhotoSubmission: View {
                         .padding(.bottom)
                 }
                 Button(action: {
-                    self.isShown.toggle()
-                    self.sourceType = .savedPhotosAlbum
+                    let db = Firestore.firestore()
+                                        
+                                            db.collection("Restaurant").whereField("Name", isEqualTo: restaurantname)
+                                                .getDocuments() { (querySnapshot, err) in
+                                                    if let err = err {
+                                                        print("Error getting documents: \(err)")
+                                                    } else {
+                                                        if querySnapshot!.documents.isEmpty {
+                                                            //create new entry
+                                                            var ref: DocumentReference? = nil
+                                                            ref = db.collection("Restaurant").addDocument(data: [
+                                                                "Name": restaurantname,
+                                                                "Location": restaurantaddress,
+                                                                "Description": restaurantdescription,
+                                                                "Menu Categories": []
+                                                            ]) { err in
+                                                                if let err = err {
+                                                                    print("Error adding document: \(err)")
+                                                                } else {
+                                                                    print("Document added with ID: \(ref!.documentID)")
+                                                                }
+                                                            }
+                                                        } else {
+                                                            //should block if restaurant already exist
+                                                            showingAlert = true
+                                                        }
+                                                    }
+                                            }
                 }) {
-                    Text("Album")
+                    Text("Upload")
                         .font(Font.system(size: geometry.size.width*0.075))
                         .fontWeight(.heavy)
                         .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
-                        .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
+                        .background(Rectangle().cornerRadius(10).foregroundColor(.blue.opacity(0.6)))
                         .padding(.bottom)
+                }.alert(isPresented: $showingAlert) {
+                    Alert(title: Text("Restaurant already added"), message: Text(restaurantname + "'s menu have previously been added by other users"), dismissButton: .default(Text("Ok")))
                 }
             }.sheet(isPresented: $isShown) {
                 A(isShown: self.$isShown, myimage: self.$image, mysourceType: self.$sourceType)
@@ -67,14 +97,6 @@ struct PhotoSubmission: View {
     
     }
 }
-
-//@ryan I commented this out.
-
-//struct PhotoSubmission_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PhotoSubmission()
-//    }
-//}
 
 struct A: UIViewControllerRepresentable{
     @Binding var isShown: Bool
@@ -117,3 +139,4 @@ class C: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelega
         isShown = false
     }
 }
+
