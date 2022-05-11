@@ -18,7 +18,7 @@ struct PhotoSubmission: View {
     var restaurantaddress: String
     var restaurantdescription: String
     @State private var showingAlert = false
-//    var email: String
+    //var email: String
     
     @State private var isShown: Bool = false
     @State private var image: Image = Image(systemName: "")
@@ -27,7 +27,7 @@ struct PhotoSubmission: View {
     var body: some View {
         GeometryReader { geometry in
             VStack{
-                image.resizable().frame(width: 300, height: 200)
+                image.resizable().frame(width: 240, height: 320).cornerRadius(5)
                 Spacer()
                 Button(action:{
                     self.isShown.toggle()
