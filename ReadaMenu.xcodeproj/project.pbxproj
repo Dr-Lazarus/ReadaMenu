@@ -26,6 +26,7 @@
 		0ACFC919281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
 		0ACFC91A281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
 		0ACFC91B281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
+		94912DFC282BA97C00F734BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 94912DFB282BA97C00F734BC /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACFC917281F84BB00D325E5 /* FirebaseFirestore in Frameworks */,
+				94912DFC282BA97C00F734BC /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,7 @@
 				0ACFC8EF281F81A700D325E5 /* ReadaMenuTests */,
 				0ACFC8F9281F81A700D325E5 /* ReadaMenuUITests */,
 				0ACFC8DD281F81A500D325E5 /* Products */,
+				94912DFA282BA97C00F734BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +119,7 @@
 		0ACFC8DE281F81A500D325E5 /* ReadaMenu */ = {
 			isa = PBXGroup;
 			children = (
+				94124815282A5B8100D2EADE /* Model */,
 				0ACFC918281F852300D325E5 /* GoogleService-Info.plist */,
 				0ACFC90A281F81F300D325E5 /* Views */,
 				0ACFC8DF281F81A500D325E5 /* ReadaMenuApp.swift */,
@@ -159,11 +163,25 @@
 				0ACFC90F281F824500D325E5 /* PhotoSubmission.swift */,
 				0ACFC911281F826300D325E5 /* ThankYou.swift */,
 				0AB8DB7F2824CA6700A5898A /* BrowseRestaurants.swift */,
-				0AB8DB812824CB5300A5898A /* RestaurantsViewModel.swift */,
 				0A4D0AAF2826D5DF000D5536 /* BrowseDishes.swift */,
 				0A4D0AB328277443000D5536 /* BrowseCategories.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		94124815282A5B8100D2EADE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AB8DB812824CB5300A5898A /* RestaurantsViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94912DFA282BA97C00F734BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +202,7 @@
 			name = ReadaMenu;
 			packageProductDependencies = (
 				0ACFC916281F84BB00D325E5 /* FirebaseFirestore */,
+				94912DFB282BA97C00F734BC /* FirebaseStorage */,
 			);
 			productName = ReadaMenu;
 			productReference = 0ACFC8DC281F81A500D325E5 /* ReadaMenu.app */;
@@ -473,13 +492,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReadaMenu/Preview Content\"";
+				DEVELOPMENT_TEAM = 3M25F8598Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,13 +523,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReadaMenu/Preview Content\"";
+				DEVELOPMENT_TEAM = 3M25F8598Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,6 +675,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0ACFC915281F84BB00D325E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		94912DFB282BA97C00F734BC /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ACFC915281F84BB00D325E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
