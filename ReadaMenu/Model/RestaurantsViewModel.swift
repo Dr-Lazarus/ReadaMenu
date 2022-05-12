@@ -31,7 +31,9 @@ class getRestaurants: ObservableObject{
                 let description = i.get("Description") as! String
                 let categories = i.get("Menu Categories") as! Array<String>
                 
-                self.restaurants.append(dataType(id: id, name: name, location: location, description: description, categories: categories))
+                if (!categories.isEmpty) {
+                    self.restaurants.append(dataType(id: id, name: name, location: location, description: description, categories: categories))
+                }
                 
             }
             
