@@ -14,7 +14,7 @@ struct BrowseCategories: View {
     var body: some View {
         List{
             ForEach(self.restaurant.categories[0...(self.restaurant.categories.capacity-1)], id: \.self){ category in
-                NavigationLink(destination: BrowseDishes()){
+                NavigationLink(destination: BrowseDishes(restaurantName: self.restaurant.name, categoryName: category)){
                     Text(category).padding()
                 }
             }
@@ -24,7 +24,6 @@ struct BrowseCategories: View {
         
     }
 }
-
 
 /*
 struct BrowseCategories_Previews: PreviewProvider {

@@ -13,6 +13,7 @@ struct BrowseRestaurants: View {
     
     @ObservedObject var restaurants = getRestaurants()
     
+    
     var body: some View {
         
         List{
@@ -27,7 +28,7 @@ struct BrowseRestaurants: View {
                         Text(i.description).font(.subheadline)
                     }.padding()
                 }
-                }
+            }
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always)) //search bar
         .navigationTitle("Restaurant List")
