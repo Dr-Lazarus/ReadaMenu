@@ -16,14 +16,14 @@ class getRestaurants: ObservableObject{
     init(){
         let db = Firestore.firestore()
         
-        db.collection("Restaurant").getDocuments{ (snap, err) in
-            
-            if err != nil {
-                print((err?.localizedDescription)!)
+        db.collection("Restaurant").addSnapshotListener { (querySnapshot, error) in
+            self.restaurants.removeAll()
+            guard let documents = querySnapshot?.documents else {
+                print("No documents")
                 return
             }
             
-            for i in snap!.documents{
+            for i in documents{
                 
                 let id = i.documentID
                 let name = i.get("Name") as! String
