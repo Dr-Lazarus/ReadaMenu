@@ -16,7 +16,7 @@ struct ReadaMenuApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeScreen()
+            HomeScreen(isPresented: false)
         }
     }
 }

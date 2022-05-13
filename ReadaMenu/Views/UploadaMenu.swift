@@ -13,6 +13,7 @@ struct UploadaMenu: View {
     @State var restaurantname: String = ""
     @State var restaurantaddress: String = ""
     @State var restaurantdescription: String = ""
+    @State var isPresented: Bool = false
 //    @State var email: String = ""
     
     @State private var showToast = false

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ThankYou: View {
+    @Environment(\.rootPresentationMode) private var rootPresentationMode
     var body: some View {
         GeometryReader { geometry in // to scale according to screen size
             VStack(alignment: .center) {
-            
+                
+                Spacer()
+                
                 Text("Thank You!")
                     .font(Font.system(size: geometry.size.width*0.1))
                     .fontWeight(.heavy)
+                    .padding(.top)
                 
                 Image("thumbsup")
                     .resizable()
@@ -24,22 +28,16 @@ struct ThankYou: View {
                 
                 VStack(alignment: .center) {
                     Text("Your photograph has been submitted successfully")
-                        .font(Font.system(size: geometry.size.width*0.077))
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom)
-                
-                    //Spacer()
-                
-                    Text("Please help to review the menu once it is ready")
-                        .font(Font.system(size: geometry.size.width*0.077))
+                        .font(Font.system(size: geometry.size.width*0.07))
                         .bold()
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
                     
-                    NavigationLink(destination: HomeScreen()){
+                    Button(action:{
+                        self.rootPresentationMode.wrappedValue.dismiss()
+                    }) {
                         Text("Return to Home")
-                            .font(Font.system(size: geometry.size.width*0.075))
+                            .font(Font.system(size: geometry.size.width*0.07))
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black).padding(25).padding([.horizontal], 40)
                             .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
@@ -49,7 +47,7 @@ struct ThankYou: View {
                 }
                 
             }.padding()
-            .frame(width: geometry.size.width * 1)
+                .frame(width: geometry.size.width * 1, height: geometry.size.height * 1, alignment: .center)
             .navigationTitle("Upload a Menu")
             .navigationBarTitleDisplayMode(.inline)
             
