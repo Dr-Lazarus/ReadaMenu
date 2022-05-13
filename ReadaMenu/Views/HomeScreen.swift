@@ -13,7 +13,7 @@ struct HomeScreen: View {
             GeometryReader { geometry in
                 VStack(alignment: .center){
 
-                    Image("Read a menu")
+                    Image(decorative: "Read a menu")
                         .resizable()
                         .scaledToFit()
                         .scaleEffect(0.5)
@@ -24,8 +24,7 @@ struct HomeScreen: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black).padding(25)
                             .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
-                            .accessibilityLabel("Click here to browse restaurants")
-                            
+                            .accessibilityLabel("Welcome to Read A Menu! Click here to browse restaurants")
                         
                     }
                 

@@ -29,10 +29,11 @@ struct UploadaMenu: View {
                 
                 HStack{
                     Spacer()
-                    Image("note-taking")
+                    Image(decorative: "note-taking")
                         .resizable()
                         .scaledToFit()
                         .scaleEffect(0.83)
+                        .accessibilityHidden(true)
                     Spacer()
                 }
 
