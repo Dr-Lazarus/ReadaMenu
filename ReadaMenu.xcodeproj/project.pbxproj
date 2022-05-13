@@ -26,6 +26,7 @@
 		0ACFC919281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
 		0ACFC91A281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
 		0ACFC91B281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
+		94083F17282E914E000C978F /* getItemCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94083F16282E914E000C978F /* getItemCost.swift */; };
 		94912DFC282BA97C00F734BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 94912DFB282BA97C00F734BC /* FirebaseStorage */; };
 		94912DFE282CD87600F734BC /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94912DFD282CD87600F734BC /* DishViewModel.swift */; };
 		94912E00282E330900F734BC /* FoodSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94912DFF282E330900F734BC /* FoodSelection.swift */; };
@@ -69,6 +70,7 @@
 		0ACFC90F281F824500D325E5 /* PhotoSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSubmission.swift; sourceTree = "<group>"; };
 		0ACFC911281F826300D325E5 /* ThankYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYou.swift; sourceTree = "<group>"; };
 		0ACFC918281F852300D325E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94083F16282E914E000C978F /* getItemCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getItemCost.swift; sourceTree = "<group>"; };
 		94912DFD282CD87600F734BC /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
 		94912DFF282E330900F734BC /* FoodSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelection.swift; sourceTree = "<group>"; };
 		94912E01282E639000F734BC /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				0AB8DB812824CB5300A5898A /* RestaurantsViewModel.swift */,
 				94912DFD282CD87600F734BC /* DishViewModel.swift */,
 				94912E01282E639000F734BC /* Selection.swift */,
+				94083F16282E914E000C978F /* getItemCost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94083F17282E914E000C978F /* getItemCost.swift in Sources */,
 				94912E02282E639000F734BC /* Selection.swift in Sources */,
 				0AB8DB802824CA6700A5898A /* BrowseRestaurants.swift in Sources */,
 				94912DFE282CD87600F734BC /* DishViewModel.swift in Sources */,

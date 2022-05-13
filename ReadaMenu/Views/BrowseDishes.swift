@@ -33,7 +33,7 @@ struct BrowseDishes: View {
                     VStack(alignment: .leading) {
                         Text(element.itemName).font(.title).bold().foregroundColor(.black)
                         Spacer()
-                        Text("$" + element.itemCost).font(.subheadline).bold().foregroundColor(.black)
+                        Text(getItemCost(itemCost: element.itemCost).itemCost).font(.subheadline).bold().foregroundColor(.black)
                         Spacer()
                         Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
                     }.padding()

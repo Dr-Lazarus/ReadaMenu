@@ -18,23 +18,20 @@ struct FoodSelection: View {
             List{
                 ForEach(self.selection){ element in
                     Button(action: {
-                        if let index = selection.firstIndex(of: element) {
-                            selection.remove(at: index)
-                        }
+                        selection.removeAll{$0 == element}
                     }) {
                         VStack(alignment: .leading) {
                             Text(element.itemName).font(.title).bold().foregroundColor(.black)
                             Spacer()
-                            Text("$" + element.itemCost).font(.subheadline).bold().foregroundColor(.black)
+                            Text(getItemCost(itemCost: element.itemCost).itemCost).font(.subheadline).bold().foregroundColor(.black)
                             Spacer()
                             Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
                         }.padding()
-                        .accessibilityElement(children: .combine)
                     }
                 }
             }.padding()
         
-            Text("Total Cost: $" + String(describing: String(format: "%.2f",getTotal(selection: $selection).total)))
+            Text(getTotal(selection: $selection).totalCost)
                 .font(.title)
                 .bold()
                 .multilineTextAlignment(.center)
