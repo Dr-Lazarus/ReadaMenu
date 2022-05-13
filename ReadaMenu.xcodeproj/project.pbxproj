@@ -28,6 +28,8 @@
 		0ACFC91B281F852300D325E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACFC918281F852300D325E5 /* GoogleService-Info.plist */; };
 		94912DFC282BA97C00F734BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 94912DFB282BA97C00F734BC /* FirebaseStorage */; };
 		94912DFE282CD87600F734BC /* DishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94912DFD282CD87600F734BC /* DishViewModel.swift */; };
+		94912E00282E330900F734BC /* FoodSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94912DFF282E330900F734BC /* FoodSelection.swift */; };
+		94912E02282E639000F734BC /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94912E01282E639000F734BC /* Selection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		0ACFC911281F826300D325E5 /* ThankYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYou.swift; sourceTree = "<group>"; };
 		0ACFC918281F852300D325E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94912DFD282CD87600F734BC /* DishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewModel.swift; sourceTree = "<group>"; };
+		94912DFF282E330900F734BC /* FoodSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelection.swift; sourceTree = "<group>"; };
+		94912E01282E639000F734BC /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 				0AB8DB7F2824CA6700A5898A /* BrowseRestaurants.swift */,
 				0A4D0AAF2826D5DF000D5536 /* BrowseDishes.swift */,
 				0A4D0AB328277443000D5536 /* BrowseCategories.swift */,
+				94912DFF282E330900F734BC /* FoodSelection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			children = (
 				0AB8DB812824CB5300A5898A /* RestaurantsViewModel.swift */,
 				94912DFD282CD87600F734BC /* DishViewModel.swift */,
+				94912E01282E639000F734BC /* Selection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,10 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94912E02282E639000F734BC /* Selection.swift in Sources */,
 				0AB8DB802824CA6700A5898A /* BrowseRestaurants.swift in Sources */,
 				94912DFE282CD87600F734BC /* DishViewModel.swift in Sources */,
 				0A4D0AB02826D5DF000D5536 /* BrowseDishes.swift in Sources */,
 				0AB8DB822824CB5300A5898A /* RestaurantsViewModel.swift in Sources */,
+				94912E00282E330900F734BC /* FoodSelection.swift in Sources */,
 				0ACFC912281F826300D325E5 /* ThankYou.swift in Sources */,
 				0ACFC8E2281F81A500D325E5 /* ContentView.swift in Sources */,
 				0ACFC8E0281F81A500D325E5 /* ReadaMenuApp.swift in Sources */,

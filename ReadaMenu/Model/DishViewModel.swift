@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import SwiftUI
 
 class getDish: ObservableObject {
     
@@ -18,7 +19,7 @@ class getDish: ObservableObject {
         let db = Firestore.firestore()
         self.restaurantname = restaurantName
         self.categoryname = categoryName
-        
+
         db.collection("Menu")
             .whereField("restaurantName", isEqualTo: restaurantName)
             .whereField("categoryName", isEqualTo: categoryName)
@@ -46,7 +47,7 @@ class getDish: ObservableObject {
 
 //https://stackoverflow.com/questions/68712919/fetch-nested-array-firebase-swiftui
 
-struct dishDataType : Identifiable{
+struct dishDataType : Identifiable, Equatable {
     var id: String
     var itemCost: String
     var itemName: String

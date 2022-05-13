@@ -13,13 +13,13 @@ struct BrowseRestaurants: View {
     
     @ObservedObject var restaurants = getRestaurants()
     
-    
     var body: some View {
         
         List{
             //ForEach(0..<50) { i in Text("List of \(i)") }
             ForEach(self.restaurants.restaurants.filter{(self.search.isEmpty ? true: $0.name.localizedCaseInsensitiveContains(self.search))}, id: \.id) {
                 i in NavigationLink(destination: BrowseCategories(restaurant: i)){
+                    
                     VStack(alignment: .leading) {
                         Text(i.name).font(.title).bold()
                         Spacer()
@@ -31,14 +31,13 @@ struct BrowseRestaurants: View {
             }
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always)) //search bar
-        .navigationTitle("Restaurant List")
+        .navigationTitle("Restaurants")
         .navigationBarTitleDisplayMode(.inline)
-        .offset(x: 0, y: -30)
     }
 }
 
-struct BrowseRestaurants_Previews: PreviewProvider {
-    static var previews: some View {
-        BrowseRestaurants()
-    }
-}
+//struct BrowseRestaurants_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BrowseRestaurants()
+//    }
+//}
