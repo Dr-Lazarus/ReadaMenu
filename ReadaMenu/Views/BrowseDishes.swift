@@ -28,7 +28,8 @@ struct BrowseDishes: View {
                     Spacer()
                     Text(element.itemDescription).font(.subheadline)
                 }.padding()
-                
+                .accessibilityElement(children: .combine)
+            
             }
         }
         .navigationTitle(categoryName)
