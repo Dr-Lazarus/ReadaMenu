@@ -38,7 +38,7 @@ struct BrowseDishes: View {
                         Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
                     }.padding()
                     .accessibilityElement(children: .combine)
-                }
+                }.accessibilityHint(add_string(itemName: element.itemName))
             
             }
         }.background(Color(.systemGray6))
@@ -47,8 +47,9 @@ struct BrowseDishes: View {
     }
 }
 
-//struct BrowseDishes_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BrowseDishes(restaurantName: restaurantName, categoryName: String)
-//    }
-//}
+func add_string(itemName: String) -> String {
+    let add_item: String = "Double clicking this button will add " + itemName + " to selection."
+    return add_item
+}
+
+
