@@ -27,6 +27,7 @@ class getDish: ObservableObject {
                     print("Error fetching documents: \(error!)")
                     return
                 }
+                self.dishes.removeAll()
                 for i in documents{
                     let categoryItem = i.get("categoryItem") as! Array<[String:String]>
                     
