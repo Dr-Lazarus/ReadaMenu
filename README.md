@@ -1,8 +1,7 @@
-<div id="top"></div>
 # Aural Delicacy
+<div id="top"></div>
 
 <!-- PROJECT LOGO -->
-<h3 align="center">Aural Delicacy</h3>
 <br />
 <div align="center">
 
