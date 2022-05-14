@@ -13,9 +13,9 @@ struct UploadaMenu: View {
     @State var restaurantname: String = ""
     @State var restaurantaddress: String = ""
     @State var restaurantdescription: String = ""
-//    @State var email: String = ""
-    
+    @State var isPresented: Bool = false
     @State private var showToast = false
+    @State var nameExist: Bool = false
 
     var body: some View {
         GeometryReader { geometry in // to scale according to screen size
@@ -38,7 +38,7 @@ struct UploadaMenu: View {
                 }
 
                 Group {
-                    Text("Name of Restaurant")
+                    Text("Restaurant Name (Required*)")
                         .font(Font.system(size: geometry.size.width*0.05))
                         .bold()
                     
@@ -47,6 +47,14 @@ struct UploadaMenu: View {
                         .font(Font.system(size: geometry.size.width*0.05))
                         //.background(RoundedRectangle(cornerRadius: 5).fill(Color.gray))
                         .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.5)))
+                        .onChange(of: restaurantname) { newValue in
+                            if newValue == "" {
+                                self.nameExist = false
+                            } else {
+                                self.nameExist = true
+                            }
+                        }
+
                     
                     Text("Restaurant Address")
                         .font(Font.system(size: geometry.size.width*0.05))
@@ -67,32 +75,8 @@ struct UploadaMenu: View {
                         .padding(13)
                         //.background(RoundedRectangle(cornerRadius: 5).fill(Color.gray))
                         .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.5)))
-      
-                    /*
-                    Text("Email (Optional)")
-                        .font(Font.system(size: geometry.size.width*0.05))
-                        .bold()
-                        .padding(.top, 15)
-                        
-                     /*
-                    Text("Please provide your email if you are open to verifying the restaurant once it is processed. Don't worry, we won't spam your email!")
-                        .font(Font.system(size: geometry.size.width*0.04))
-                        .fontWeight(.semibold)
-                        //.padding(.top,0.001)
-                     */
-                        
-                    TextField("", text: $email)
-                        .padding(13)
-                        //.background(RoundedRectangle(cornerRadius: 5).fill(Color.gray))
-                        .overlay(RoundedRectangle(cornerRadius: 5).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.5)))
-                        .padding([.vertical])
-                     */
-                    
                 }
                 
-                //Spacer()
-                //Pass Data to PhotoSubmission. API call is current made here but eventually should be shifted to be made together with menu category information
-                //https://stackoverflow.com/questions/65452602/how-can-i-pass-data-through-a-navigation-link-with-fetchedresults-and-coredata
                 HStack{
                     Spacer()
                     NavigationLink(destination: PhotoSubmission(restaurantname: restaurantname, restaurantaddress: restaurantaddress, restaurantdescription: restaurantdescription), label: {
@@ -101,7 +85,7 @@ struct UploadaMenu: View {
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black).padding(15).padding([.horizontal])
                             .background(Rectangle().cornerRadius(20).foregroundColor(.yellow))
-                    })
+                    }).disabled(!nameExist)
                 }
                                 
             }

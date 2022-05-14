@@ -20,6 +20,7 @@ struct PhotoSubmission: View {
     var restaurantaddress: String
     var restaurantdescription: String
     @State private var showingRestaurantExistAlert = false
+    @State private var uploading = false
     @State private var showingSuccessAlert = false
     //var email: String
     
@@ -29,88 +30,92 @@ struct PhotoSubmission: View {
     @State private var imageData: Data = Data()
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack{
-                image.resizable().frame(width: 240, height: 320).cornerRadius(5)
-                Spacer()
-                Button(action:{
-                    self.isShown.toggle()
-                    self.sourceType = .camera
-                }) {
-                    Text("Camera")
-                        .font(Font.system(size: geometry.size.width*0.075))
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
-                        .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
-                        .padding(.bottom)
-                }
-                Button(action:{
-                    self.isShown.toggle()
-                    self.sourceType = .photoLibrary
-                }) {
-                    Text("Gallery")
-                        .font(Font.system(size: geometry.size.width*0.075))
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
-                        .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
-                        .padding(.bottom)
-                }
-                Button(action: {
-                    let db = Firestore.firestore()
-                    let storageRef = Storage.storage().reference().child(restaurantname)
-                                        
-                                            db.collection("Restaurant").whereField("Name", isEqualTo: restaurantname)
-                                                .getDocuments() { (querySnapshot, err) in
-                                                    if let err = err {
-                                                        print("Error getting documents: \(err)")
-                                                    } else {
-                                                        if querySnapshot!.documents.isEmpty {
-                                                            if (!isShown && !imageData.isEmpty) {
-                                                                _ = storageRef.putData(imageData, metadata: nil) { [self] (metadata, error) in
-                                                                  // You can also access to download URL after upload.
-                                                                    storageRef.downloadURL { (url, error) in
-                                                                    //create new entry
-                                                                    var ref: DocumentReference? = nil
-                                                                    ref = db.collection("Restaurant").addDocument(data: [
-                                                                        "Name": restaurantname,
-                                                                        "Location": restaurantaddress,
-                                                                        "Description": restaurantdescription,
-                                                                        "Menu Categories": [],
-                                                                        "ImageURL": url?.absoluteString ?? ""
-                                                                    ]) { err in
-                                                                        if let err = err {
-                                                                            print("Error adding document: \(err)")
-                                                                        } else {
-                                                                            print("Document added with ID: \(ref!.documentID)")
-                                                                            showingSuccessAlert = true
-                                                                        }
-                                                                    }
-                                                                  }
-                                                                }
-                                                            }
-                                                            
+        if (!showingSuccessAlert) {
+            GeometryReader { geometry in
+                VStack{
+                    image.resizable().frame(width: 240, height: 320).cornerRadius(5)
+                    Spacer()
+                    Button(action:{
+                        self.isShown.toggle()
+                        self.sourceType = .camera
+                    }) {
+                        Text("Camera")
+                            .font(Font.system(size: geometry.size.width*0.075))
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
+                            .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
+                            .padding(.bottom)
+                    }
+                    Button(action:{
+                        self.isShown.toggle()
+                        self.sourceType = .photoLibrary
+                    }) {
+                        Text("Gallery")
+                            .font(Font.system(size: geometry.size.width*0.075))
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
+                            .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
+                            .padding(.bottom)
+                    }
+                    Button(action: {
+                        let db = Firestore.firestore()
+                        let storageRef = Storage.storage().reference().child(restaurantname)
+                                            
+                                                db.collection("Restaurant").whereField("Name", isEqualTo: restaurantname)
+                                                    .getDocuments() { (querySnapshot, err) in
+                                                        if let err = err {
+                                                            print("Error getting documents: \(err)")
                                                         } else {
-                                                            //should block if restaurant already exist
-                                                            showingRestaurantExistAlert = true
+                                                            if querySnapshot!.documents.isEmpty {
+                                                                uploading = true
+                                                                if (!isShown && !imageData.isEmpty) {
+                                                                    _ = storageRef.putData(imageData, metadata: nil) { [self] (metadata, error) in
+                                                                      // You can also access to download URL after upload.
+                                                                        storageRef.downloadURL { (url, error) in
+                                                                        //create new entry
+                                                                        var ref: DocumentReference? = nil
+                                                                        ref = db.collection("Restaurant").addDocument(data: [
+                                                                            "Name": restaurantname,
+                                                                            "Location": restaurantaddress,
+                                                                            "Description": restaurantdescription,
+                                                                            "Menu Categories": [],
+                                                                            "ImageURL": url?.absoluteString ?? ""
+                                                                        ]) { err in
+                                                                            if let err = err {
+                                                                                print("Error adding document: \(err)")
+                                                                            } else {
+                                                                                print("Document added with ID: \(ref!.documentID)")
+                                                                                showingSuccessAlert = true
+                                                                            }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                }
+                                                                
+                                                            } else {
+                                                                //should block if restaurant already exist
+                                                                showingRestaurantExistAlert = true
+                                                            }
                                                         }
-                                                    }
-                                            }
-                }) {
-                    Text("Upload")
-                        .font(Font.system(size: geometry.size.width*0.075))
-                        .fontWeight(.heavy)
-                        .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
-                        .background(Rectangle().cornerRadius(10).foregroundColor(.blue.opacity(0.6)))
-                        .padding(.bottom)
-                }.alert(isPresented: $showingRestaurantExistAlert) {
-                    Alert(title: Text("Restaurant already added"), message: Text(restaurantname.capitalizingFirstLetter() + "'s menu have previously been added by other users"), dismissButton: .default(Text("Ok")))
-                }.toast(message: restaurantname.capitalizingFirstLetter() + "'s menu have been successfully uploaded",
-                           isShowing: $showingSuccessAlert,
-                           duration: Toast.short)
-
-            }.sheet(isPresented: $isShown) {
-                A(isShown: self.$isShown, myimage: self.$image, mysourceType: self.$sourceType, imageData: self.$imageData)
-        }.frame(width: geometry.size.width * 1)
+                                                }
+                    }) {
+                        Text("Upload")
+                            .font(Font.system(size: geometry.size.width*0.075))
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 100)
+                            .background(Rectangle().cornerRadius(10).foregroundColor(.blue.opacity(0.6)))
+                            .padding(.bottom)
+                    }.alert(isPresented: $showingRestaurantExistAlert) {
+                        Alert(title: Text("Restaurant Already Exist"), message: Text( restaurantname.capitalizingFirstLetter() + "'s menu have been previously submitted by another user"), dismissButton: .default(Text("Ok")))
+                    }.toast(message: "Please wait while we upload " + restaurantname.capitalizingFirstLetter() + "'s menu",
+                               isShowing: $uploading,
+                               duration: Toast.long)
+                }.sheet(isPresented: $isShown) {
+                    A(isShown: self.$isShown, myimage: self.$image, mysourceType: self.$sourceType, imageData: self.$imageData)
+            }.frame(width: geometry.size.width * 1)
+        }
+        } else {
+            ThankYou()
         }
     }
 }
@@ -164,8 +169,7 @@ class C: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelega
 struct Toast: ViewModifier {
   // these correspond to Android values f
   // or DURATION_SHORT and DURATION_LONG
-  static let short: TimeInterval = 2
-  static let long: TimeInterval = 3.5
+  static let long: TimeInterval = 5
 
   let message: String
   @Binding var isShowing: Bool
@@ -216,9 +220,9 @@ struct Toast: ViewModifier {
     let animation: Animation
 
     init(textColor: Color = .white,
-         font: Font = .system(size: 14),
+         font: Font = .system(size: 24),
          backgroundColor: Color = .black.opacity(0.588),
-         duration: TimeInterval = Toast.short,
+         duration: TimeInterval = Toast.long,
          transition: AnyTransition = .opacity,
          animation: Animation = .linear(duration: 0.3)) {
       self.textColor = textColor

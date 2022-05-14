@@ -27,8 +27,8 @@ struct FoodSelection: View {
                             Spacer()
                             Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
                         }.padding()
-                    }
-                }
+                    }.accessibilityHint(remove_string(itemName: element.itemName))
+                }.listRowInsets(.init(top: 50, leading: 50, bottom: 50, trailing: 50))
             }.padding()
         
             Text(getTotal(selection: $selection).totalCost)
@@ -42,4 +42,9 @@ struct FoodSelection: View {
             .background(Color(UIColor.systemGray6))
         
     }
+}
+
+func remove_string(itemName: String) -> String {
+    let remove_item: String = "Double clicking this button will remove " + itemName + " from selection."
+    return remove_item
 }
