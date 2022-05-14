@@ -57,7 +57,9 @@ To set up the project locally and get it running on your iPhone, follow these fe
 
 ## 1) Visually-impaired User
 
+<div align="center">
 https://user-images.githubusercontent.com/66586824/168420153-1db06b80-478d-4ddf-b7c8-e31e19c95157.mp4
+</div>
 
 ### Browse Restaurants and Search for Restaurants
 ![Restaurants](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Restaurant%20Screen.png)
@@ -84,7 +86,7 @@ https://user-images.githubusercontent.com/66586824/168420178-6868ebff-04fd-4362-
 ![Gallery Picker](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Gallery%20Picker%20Screen.png)
 
 ### Upload Successful
-![Upload Success](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Successful%20Upload%20Screen.png)
+<img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Successful%20Upload%20Screen.png" width="360" height="640">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
