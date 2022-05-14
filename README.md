@@ -77,10 +77,14 @@ To set up the project locally and get it running on your iPhone, follow these fe
    <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Food%20Item%20Screen.png" width="376" height="710">
 </div>
 
+Double-clicking when VoiceOver mode is enabled (or single-clicking when VoiceOver mode is not enabled) will add the item to selection and allow the diner to review what they have chosen again.
+
 ### Review all Food Items added to Selection
 <div align="center">
    <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.png" width="376" height="710">
 </div>
+
+Double-clicking when VoiceOver mode is enabled (or single-clicking when VoiceOver mode is not enabled) will remove item from selection.
 
 ## 2) Menu Submission Volunteers
 
