@@ -110,6 +110,11 @@ Double-clicking when VoiceOver mode is enabled (or single-clicking when VoiceOve
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## 3) Nanonets Backend
+
+### Nanonets Python Script (Google Collab Notebook):https://colab.research.google.com/drive/1Ar9x-mY-a1tCf3ebaBDjabLuzQcjuAf_?usp=sharing
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- CONTACT -->
 ## Contributors
 
