@@ -55,14 +55,14 @@
 		0A4D0AB328277443000D5536 /* BrowseCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCategories.swift; sourceTree = "<group>"; };
 		0AB8DB7F2824CA6700A5898A /* BrowseRestaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRestaurants.swift; sourceTree = "<group>"; };
 		0AB8DB812824CB5300A5898A /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
-		0ACFC8DC281F81A500D325E5 /* ReadaMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadaMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACFC8DC281F81A500D325E5 /* Aural Delicacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aural Delicacy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACFC8DF281F81A500D325E5 /* ReadaMenuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadaMenuApp.swift; sourceTree = "<group>"; };
 		0ACFC8E1281F81A500D325E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0ACFC8E3281F81A700D325E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACFC8E6281F81A700D325E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0ACFC8EC281F81A700D325E5 /* ReadaMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadaMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACFC8EC281F81A700D325E5 /* Aural DelicacyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aural DelicacyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACFC8F0281F81A700D325E5 /* ReadaMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadaMenuTests.swift; sourceTree = "<group>"; };
-		0ACFC8F6281F81A700D325E5 /* ReadaMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadaMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ACFC8F6281F81A700D325E5 /* Aural DelicacyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aural DelicacyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACFC8FA281F81A700D325E5 /* ReadaMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadaMenuUITests.swift; sourceTree = "<group>"; };
 		0ACFC8FC281F81A700D325E5 /* ReadaMenuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadaMenuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0ACFC90B281F820600D325E5 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -117,9 +117,9 @@
 		0ACFC8DD281F81A500D325E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0ACFC8DC281F81A500D325E5 /* ReadaMenu.app */,
-				0ACFC8EC281F81A700D325E5 /* ReadaMenuTests.xctest */,
-				0ACFC8F6281F81A700D325E5 /* ReadaMenuUITests.xctest */,
+				0ACFC8DC281F81A500D325E5 /* Aural Delicacy.app */,
+				0ACFC8EC281F81A700D325E5 /* Aural DelicacyTests.xctest */,
+				0ACFC8F6281F81A700D325E5 /* Aural DelicacyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0ACFC8DB281F81A500D325E5 /* ReadaMenu */ = {
+		0ACFC8DB281F81A500D325E5 /* Aural Delicacy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACFC900281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenu" */;
+			buildConfigurationList = 0ACFC900281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural Delicacy" */;
 			buildPhases = (
 				0ACFC8D8281F81A500D325E5 /* Sources */,
 				0ACFC8D9281F81A500D325E5 /* Frameworks */,
@@ -211,18 +211,18 @@
 			);
 			dependencies = (
 			);
-			name = ReadaMenu;
+			name = "Aural Delicacy";
 			packageProductDependencies = (
 				0ACFC916281F84BB00D325E5 /* FirebaseFirestore */,
 				94912DFB282BA97C00F734BC /* FirebaseStorage */,
 			);
 			productName = ReadaMenu;
-			productReference = 0ACFC8DC281F81A500D325E5 /* ReadaMenu.app */;
+			productReference = 0ACFC8DC281F81A500D325E5 /* Aural Delicacy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0ACFC8EB281F81A700D325E5 /* ReadaMenuTests */ = {
+		0ACFC8EB281F81A700D325E5 /* Aural DelicacyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACFC903281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenuTests" */;
+			buildConfigurationList = 0ACFC903281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural DelicacyTests" */;
 			buildPhases = (
 				0ACFC8E8281F81A700D325E5 /* Sources */,
 				0ACFC8E9281F81A700D325E5 /* Frameworks */,
@@ -233,14 +233,14 @@
 			dependencies = (
 				0ACFC8EE281F81A700D325E5 /* PBXTargetDependency */,
 			);
-			name = ReadaMenuTests;
+			name = "Aural DelicacyTests";
 			productName = ReadaMenuTests;
-			productReference = 0ACFC8EC281F81A700D325E5 /* ReadaMenuTests.xctest */;
+			productReference = 0ACFC8EC281F81A700D325E5 /* Aural DelicacyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0ACFC8F5281F81A700D325E5 /* ReadaMenuUITests */ = {
+		0ACFC8F5281F81A700D325E5 /* Aural DelicacyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ACFC906281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenuUITests" */;
+			buildConfigurationList = 0ACFC906281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural DelicacyUITests" */;
 			buildPhases = (
 				0ACFC8F2281F81A700D325E5 /* Sources */,
 				0ACFC8F3281F81A700D325E5 /* Frameworks */,
@@ -251,9 +251,9 @@
 			dependencies = (
 				0ACFC8F8281F81A700D325E5 /* PBXTargetDependency */,
 			);
-			name = ReadaMenuUITests;
+			name = "Aural DelicacyUITests";
 			productName = ReadaMenuUITests;
-			productReference = 0ACFC8F6281F81A700D325E5 /* ReadaMenuUITests.xctest */;
+			productReference = 0ACFC8F6281F81A700D325E5 /* Aural DelicacyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -279,7 +279,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0ACFC8D7281F81A500D325E5 /* Build configuration list for PBXProject "ReadaMenu" */;
+			buildConfigurationList = 0ACFC8D7281F81A500D325E5 /* Build configuration list for PBXProject "Aural Delicacy" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,9 +295,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0ACFC8DB281F81A500D325E5 /* ReadaMenu */,
-				0ACFC8EB281F81A700D325E5 /* ReadaMenuTests */,
-				0ACFC8F5281F81A700D325E5 /* ReadaMenuUITests */,
+				0ACFC8DB281F81A500D325E5 /* Aural Delicacy */,
+				0ACFC8EB281F81A700D325E5 /* Aural DelicacyTests */,
+				0ACFC8F5281F81A700D325E5 /* Aural DelicacyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,12 +375,12 @@
 /* Begin PBXTargetDependency section */
 		0ACFC8EE281F81A700D325E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0ACFC8DB281F81A500D325E5 /* ReadaMenu */;
+			target = 0ACFC8DB281F81A500D325E5 /* Aural Delicacy */;
 			targetProxy = 0ACFC8ED281F81A700D325E5 /* PBXContainerItemProxy */;
 		};
 		0ACFC8F8281F81A700D325E5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0ACFC8DB281F81A500D325E5 /* ReadaMenu */;
+			target = 0ACFC8DB281F81A500D325E5 /* Aural Delicacy */;
 			targetProxy = 0ACFC8F7281F81A700D325E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -511,7 +511,7 @@
 				DEVELOPMENT_TEAM = 3M25F8598Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ReadaMenu camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -524,7 +524,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal-Project.ReadaMenu";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aural Delicacy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -542,7 +542,7 @@
 				DEVELOPMENT_TEAM = 3M25F8598Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "ReadaMenu camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -555,7 +555,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal-Project.ReadaMenu";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aural Delicacy";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -577,7 +577,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadaMenu.app/ReadaMenu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aural Delicacy.app/Aural Delicacy";
 			};
 			name = Debug;
 		};
@@ -596,7 +596,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReadaMenu.app/ReadaMenu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aural Delicacy.app/Aural Delicacy";
 			};
 			name = Release;
 		};
@@ -637,7 +637,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ACFC8D7281F81A500D325E5 /* Build configuration list for PBXProject "ReadaMenu" */ = {
+		0ACFC8D7281F81A500D325E5 /* Build configuration list for PBXProject "Aural Delicacy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACFC8FE281F81A700D325E5 /* Debug */,
@@ -646,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ACFC900281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenu" */ = {
+		0ACFC900281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural Delicacy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACFC901281F81A700D325E5 /* Debug */,
@@ -655,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ACFC903281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenuTests" */ = {
+		0ACFC903281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural DelicacyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACFC904281F81A700D325E5 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0ACFC906281F81A700D325E5 /* Build configuration list for PBXNativeTarget "ReadaMenuUITests" */ = {
+		0ACFC906281F81A700D325E5 /* Build configuration list for PBXNativeTarget "Aural DelicacyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0ACFC907281F81A700D325E5 /* Debug */,
