@@ -57,36 +57,52 @@ To set up the project locally and get it running on your iPhone, follow these fe
 
 ## 1) Visually-impaired User
 
-<div align="center">
-https://user-images.githubusercontent.com/66586824/168420153-1db06b80-478d-4ddf-b7c8-e31e19c95157.mp4
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/27C9skqdx4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Browse Restaurants and Search for Restaurants
-![Restaurants](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Restaurant%20Screen.png)
-![Search](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Search%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Restaurant%20Screen.png" width="360" height="640">
+</div>
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Search%20Screen.png" width="360" height="640">
+</div>
 
 ### Browse through Menu Categories
-![Menu Categories](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Menu%20Categories%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Menu%20Categories%20Screen.png" width="360" height="640">
+</div>
 
 ### Browse through Food Items
-![Food Items](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Food%20Item%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Food%20Item%20Screen.png" width="360" height="640">
+</div>
 
 ### Review all Food Items added to Selection
-![Food Selection](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.pngg" width="360" height="640">
+</div>
 
 ## 2) Menu Submission Volunteers
 
 https://user-images.githubusercontent.com/66586824/168420178-6868ebff-04fd-4362-ba2d-3628a50909db.mp4
 
 ### Restaurant Details 
-![Restaurant Details](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Details%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Details%20Screen.png" width="360" height="640">
+</div>
 
 ### Restaurant Menu (Camera or Photo from Gallery)
-![Menu Submission](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Menu%20Submission%20Screen.png)
-![Gallery Picker](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Gallery%20Picker%20Screen.png)
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Menu%20Submission%20Screen.png" width="360" height="640">
+</div>
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Gallery%20Picker%20Screen.png" width="360" height="640">
+</div>
 
 ### Upload Successful
-<img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Successful%20Upload%20Screen.png" width="360" height="640">
+<div align="center">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Successful%20Upload%20Screen.png" width="360" height="640">
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
