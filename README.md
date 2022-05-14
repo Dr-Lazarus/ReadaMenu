@@ -57,13 +57,7 @@ To set up the project locally and get it running on your iPhone, follow these fe
 
 ## 1) Visually-impaired User
 
-[![Browse Restaurants with Voiceover](https://img.youtube.com/vi/27C9skqdx4k/0.jpg )](https://www.youtube.com/watch?v=27C9skqdx4k)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=27C9skqdx4k">
-         <img src="https://img.youtube.com/vi/5yLzZikS15k/0.jpg" style="width:100%;">
-      </a>
-</div>
+Video Link of Browsing Process (Voiceover-Mode): https://www.youtube.com/watch?v=27C9skqdx4k)
 
 ### Browse Restaurants and Search for Restaurants
 <div align="center">
@@ -85,12 +79,12 @@ To set up the project locally and get it running on your iPhone, follow these fe
 
 ### Review all Food Items added to Selection
 <div align="center">
-   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.pngg" width="376" height="710">
+   <img src="https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.png" width="376" height="710">
 </div>
 
 ## 2) Menu Submission Volunteers
 
-[![Menu Submission](https://img.youtube.com/vi/FF1F5tVsN2w/0.jpg )](https://www.youtube.com/watch?v=FF1F5tVsN2w)
+Video Link of Menu Submission Process: https://www.youtube.com/watch?v=FF1F5tVsN2w
 
 ### Restaurant Details 
 <div align="center">
