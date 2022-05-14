@@ -57,7 +57,7 @@ To set up the project locally and get it running on your iPhone, follow these fe
 
 ## 1) Visually-impaired User
 
-Video Link of Browsing Process (Voiceover-Mode): https://www.youtube.com/watch?v=27C9skqdx4k)
+###Video Link of Browsing Process (Voiceover-Mode): https://www.youtube.com/watch?v=27C9skqdx4k)
 
 ### Browse Restaurants and Search for Restaurants
 <div align="center">
@@ -84,7 +84,7 @@ Video Link of Browsing Process (Voiceover-Mode): https://www.youtube.com/watch?v
 
 ## 2) Menu Submission Volunteers
 
-Video Link of Menu Submission Process: https://www.youtube.com/watch?v=FF1F5tVsN2w
+###Video Link of Menu Submission Process: https://www.youtube.com/watch?v=FF1F5tVsN2w
 
 ### Restaurant Details 
 <div align="center">
