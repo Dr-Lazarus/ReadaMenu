@@ -33,9 +33,9 @@ struct BrowseDishes: View {
                     VStack(alignment: .leading) {
                         Text(element.itemName).font(.title).bold().foregroundColor(.black)
                         Spacer()
-                        Text(getItemCost(itemCost: element.itemCost).itemCost).font(.subheadline).bold().foregroundColor(.black)
+                        Text(getItemCost(itemCost: element.itemCost).itemCost).font(.headline).bold().foregroundColor(.black)
                         Spacer()
-                        Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
+                        Text(element.itemDescription).font(.callout).foregroundColor(.black)
                     }.padding()
                     .accessibilityElement(children: .combine)
                 }.accessibilityHint(add_string(itemName: element.itemName))

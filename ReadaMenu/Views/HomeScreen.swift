@@ -24,7 +24,7 @@ struct HomeScreen: View {
                             .font(Font.system(size: geometry.size.width*0.060))
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black).padding(25).padding([.horizontal], 40)
-                            .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
+                            .background(Rectangle().frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.15).cornerRadius(10).foregroundColor(.yellow))
                             .accessibilityLabel("Welcome to Read A Menu! Click here to browse restaurants")
                     }.padding([.bottom],60)
             
@@ -33,7 +33,7 @@ struct HomeScreen: View {
                             .font(Font.system(size: geometry.size.width*0.060))
                             .fontWeight(.heavy)
                             .foregroundColor(Color.black).padding(25).padding([.horizontal], 60)
-                            .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
+                            .background(Rectangle().frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.15).cornerRadius(10).foregroundColor(.yellow))
                             .accessibilityLabel("Click here to upload a menu")
                     }).isDetailLink(false)
                     Spacer()
