@@ -114,7 +114,7 @@ Double-clicking when VoiceOver mode is enabled (or single-clicking when VoiceOve
 ## Contributors
 
 * Ryan Pan Tang Kai (https://www.linkedin.com/in/ryan-pan-27533517a/)
-* Luah Shihui (https://www.linkedin.com/in/shihuicsd/)
+* Luah Shi Hui (https://www.linkedin.com/in/shihuicsd/)
 * Visshal Natarajan (https://www.linkedin.com/in/visshal-natarajan/)
 * Keshav Natarajan (https://www.linkedin.com/in/keshavnatarajan/)
 
