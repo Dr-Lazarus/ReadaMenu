@@ -5,8 +5,7 @@
 <br />
 <div align="center">
 
-![Aural Delicacy Logo](https://github.com/ShiHui21/ReadaMenu/blob/main/ReadaMenu/Assets.xcassets/Read%20a%20menu.imageset/Read%20a%20menu.jpg)
-</div>
+<img src="https://github.com/ShiHui21/ReadaMenu/blob/main/ReadaMenu/Assets.xcassets/Read%20a%20menu.imageset/Read%20a%20menu.jpg" width="400" height="400">
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
