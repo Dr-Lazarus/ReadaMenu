@@ -28,7 +28,7 @@ struct FoodSelection: View {
                             Text(element.itemDescription).font(.subheadline).foregroundColor(.black)
                         }.padding()
                     }.accessibilityHint(remove_string(itemName: element.itemName))
-                }
+                }.listRowInsets(.init(top: 50, leading: 50, bottom: 50, trailing: 50))
             }.padding()
         
             Text(getTotal(selection: $selection).totalCost)

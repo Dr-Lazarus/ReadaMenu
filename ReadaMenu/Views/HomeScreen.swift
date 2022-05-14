@@ -21,18 +21,18 @@ struct HomeScreen: View {
                     
                     NavigationLink(destination: BrowseRestaurants()){
                         Text("Browse Restaurants")
-                            .font(Font.system(size: geometry.size.width*0.075))
+                            .font(Font.system(size: geometry.size.width*0.060))
                             .fontWeight(.heavy)
-                            .foregroundColor(Color.black).padding(25)
+                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 40)
                             .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
                             .accessibilityLabel("Welcome to Read A Menu! Click here to browse restaurants")
-                    }.padding()
+                    }.padding([.bottom],60)
             
                     NavigationLink(destination: UploadaMenu(), isActive: self.$isPresented, label:{
                         Text("Upload a Menu")
-                            .font(Font.system(size: geometry.size.width*0.075))
+                            .font(Font.system(size: geometry.size.width*0.060))
                             .fontWeight(.heavy)
-                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 40)
+                            .foregroundColor(Color.black).padding(25).padding([.horizontal], 60)
                             .background(Rectangle().cornerRadius(10).foregroundColor(.yellow))
                             .accessibilityLabel("Click here to upload a menu")
                     }).isDetailLink(false)

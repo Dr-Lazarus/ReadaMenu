@@ -28,7 +28,7 @@ struct BrowseRestaurants: View {
                         Text(i.description).font(.subheadline)
                     }.padding()
                 }
-            }
+            }.listRowInsets(.init(top: 50, leading: 50, bottom: 50, trailing: 50))
         }
         .searchable(text: $search, placement: .navigationBarDrawer(displayMode: .always)) //search bar
         .navigationTitle("Restaurants")

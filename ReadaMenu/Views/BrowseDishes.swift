@@ -39,8 +39,9 @@ struct BrowseDishes: View {
                     }.padding()
                     .accessibilityElement(children: .combine)
                 }.accessibilityHint(add_string(itemName: element.itemName))
+                   
             
-            }
+            }.listRowInsets(.init(top: 50, leading: 50, bottom: 50, trailing: 50))
         }.background(Color(.systemGray6))
         .navigationTitle(categoryName)
         .navigationBarTitleDisplayMode(.inline)
