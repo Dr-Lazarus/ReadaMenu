@@ -17,38 +17,84 @@ Our app uses crowd-sourcing to increase our collection of accessible menus avail
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- PROJECT BACKGROUND-->
+## Project Background
+
+A visually-impaired person faces many challenges when dining out and one of the biggest obstacles is being able to read the menu. According to an [blogpost written by a vision-impaired writer](https://www.johnbaileyspeaker.com/how-do-blind-people-read-a-menu/), visually-impaired diners usually depend on the friends they are dining with or the waiters at the restaurants to help them read the menu. However, many visually-impaired diners would be afraid of inconveniencing their friends and the waiters into reading the entire menu to them and would compromise by ordering items that are recommended instead of items that they truly want. Newer technological solutions such as using Optical Character Recognition (OCR) also has its drawbacks as visually-impaired diners are not able to skip food sections that they are not interested in and have to spend the time listening to everything on the menu.
+
+We believe that we can build a pleasant dining experience for our visually-impaired companions such that they are able to dine independently and conveniently. 
+
+Hence, the objective of our app is to convert restaurant menus into a digital menu that is supported by iPhone's VoiceOver functionality to allow visually impaired users to browse through a menu like how a normal diner would. Information are categorised and organised together to provide visually impaired users with the neccessary information to make their decisions swiftly and conveniently.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Built With
 
 * [Swift](https://developer.apple.com/swift/)
 * [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 * [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore)
 * [Firebase Cloud Storage](https://firebase.google.com/docs/storage)
-* [Nanonets](https://nanonets.com/)
+* [Nanonets Menu Recognition API](https://nanonets.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Setting Up
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up the project locally and get it running on your iPhone, follow these few simple steps. While our app can be runned on the iOS simulator on xCode, we recommend running it on your personal iPhone device for you to be able to access the Camera function.
+
+1) Clone the GitHub repository
+   ```sh
+   git clone https://github.com/ShiHui21/ReadaMenu.git
+   ```
+2) Open up the project in xCode
+3) Compile and run the app
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Features and User Journey
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+## 1) Visually-impaired User
+
+https://user-images.githubusercontent.com/66586824/168420153-1db06b80-478d-4ddf-b7c8-e31e19c95157.mp4
+
+### Browse Restaurants and Search for Restaurants
+![Restaurants](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Restaurant%20Screen.png)
+![Search](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Search%20Screen.png)
+
+### Browse through Menu Categories
+![Menu Categories](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Menu%20Categories%20Screen.png)
+
+### Browse through Food Items
+![Food Items](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Browse%20Food%20Item%20Screen.png)
+
+### Review all Food Items added to Selection
+![Food Selection](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Food%20Selection%20Screen.png)
+
+## 2) Menu Submission Volunteers
+
+https://user-images.githubusercontent.com/66586824/168420178-6868ebff-04fd-4362-ba2d-3628a50909db.mp4
+
+### Restaurant Details 
+![Restaurant Details](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Restaurant%20Details%20Screen.png)
+
+### Restaurant Menu (Camera or Photo from Gallery)
+![Menu Submission](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Menu%20Submission%20Screen.png)
+![Gallery Picker](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Gallery%20Picker%20Screen.png)
+
+### Upload Successful
+![Upload Success](https://github.com/ShiHui21/ReadaMenu/blob/main/App%20Screens/Successful%20Upload%20Screen.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contributors
 
-* [Ryan Pan Tang Kai] (https://www.linkedin.com/in/ryan-pan-27533517a/)
-* [Luah Shihui] (https://www.linkedin.com/in/shihuicsd/)
-* [Visshal Natarajan] (https://www.linkedin.com/in/visshal-natarajan/)
-* [Keshav Natarajan] (https://www.linkedin.com/in/keshavnatarajan/)
+* Ryan Pan Tang Kai (https://www.linkedin.com/in/ryan-pan-27533517a/)
+* Luah Shihui (https://www.linkedin.com/in/shihuicsd/)
+* Visshal Natarajan (https://www.linkedin.com/in/visshal-natarajan/)
+* Keshav Natarajan (https://www.linkedin.com/in/keshavnatarajan/)
 
 Project Link: [https://github.com/ShiHui21/ReadaMenu](https://github.com/ShiHui21/ReadaMenu)
 
